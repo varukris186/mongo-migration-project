@@ -1,0 +1,21 @@
+{
+  "name": "adi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preload":"node -r dotenv/config . dotenv_config_path=./.env",
+    "migrate-init":"migrate-mongo init",
+    "migrate-up": "migrate-mongo up",
+    "migrate-down": "migrate-mongo down",
+    "migrate-create-ruleset":"migrate-mongo create rulesets",
+    "migrate-create-rules":"migrate-mongo create rules"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "migrate-mongo": "*"
+    },
+  "author": "Aditya Sarvabatla",
+  "license": "ISC"
+}

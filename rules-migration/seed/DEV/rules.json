@@ -1,0 +1,4345 @@
+[
+    {
+        "_id": "4cf7c69d-bcaf-4649-b150-0c955898c8f6",
+        "name": "Can only be blank when Data Element 48 - Date of Most Recent or Amended IPE is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "123456789"
+        ]
+    },
+    {
+        "_id": "8013b99f-79b2-4f89-860f-ce1b4ff6fc90",
+        "name": "Must be within 365 days of Element 353 - Date of Exit",
+        "given": null,
+        "condition": {
+            "predicate": "daysDiffLessOrEqual",
+            "parameters": [
+                "$.current.postExitTrainEnrolledDate",
+                365,
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE376"
+        ]
+    },
+    {
+        "_id": "bf3417bf-dc2b-4817-8e67-09b8da9a4303",
+        "name": "Must be within 365 days of Element 353 - Date of Exit",
+        "given": null,
+        "condition": {
+            "predicate": "daysDiffLessOrEqual",
+            "parameters": [
+                "$.current.postExitCredentialDate",
+                365,
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE377"
+        ]
+    },
+    {
+        "_id": "ff7e136b-2347-48fc-a4f2-cffdb5ede864",
+        "name": "Must be 0;0 if Element 43 - Primary Disability is 0;0",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "0;0",
+                "$.current.priDisability"
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                "0;0",
+                "$.current.secDisability"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE043"
+        ]
+    },
+    {
+        "_id": "1a2a608f-f528-4a84-ba9f-45b0b38fa394",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.sex"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038",
+            "1a2a608f-f528-4a84-ba9f-45b0b38fa394"
+        ]
+    },
+    {
+        "_id": "395e5fa3-e30d-4ff6-9c9d-1b30d091e354",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.veteran"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038",
+            "395e5fa3-e30d-4ff6-9c9d-1b30d091e354"
+        ]
+    },
+    {
+        "_id": "ffc50d7a-cb3c-478b-8917-3cc3e2cb7554",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.livingArrangement"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "07e4a2a5-08b4-4392-924e-7e11fc9da8dc",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.stateCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "dd4fda04-bf03-41b5-981e-04ed3060a573",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.countyCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "dd7983b8-e8ff-4857-9daf-eae979a7649d",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.zipCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "046a2ac1-53a5-4dbe-9c47-385711a4b1cd",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.referralSource"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "d60a019f-1294-4737-8142-f665b185b904",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssdiAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "591cef73-f6af-4497-9c8a-4406c9af2d94",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssiAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "cad5ece1-476c-4ea0-a176-c25ff9152437",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.tanfAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "f0085d93-5950-430f-96ac-4566b957eaa2",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.genAssistanceAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "3f12fb04-2724-4215-ba52-3ccab6a5ab57",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.vetDisabilityAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "75893e57-a4f0-40f0-b973-12ba2aadc404",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.workersCompAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "018f580e-72cd-40fa-9c47-2ae737180a60",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.unemploymentInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "ce50b565-c7e2-48d9-bc05-722e6dbda068",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.primarySupportAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "83d46ce9-5245-4d7a-a316-358c691ff6a5",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicaidAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "e95a4315-b243-4a1a-842f-1e70e486dccd",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicareAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "2f7ebde4-186a-43be-8fc3-b74ed47a944c",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.acaAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "465db4a0-ef99-4d2a-b1e2-97ee9b834738",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.publicInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "024003cc-2695-461e-9918-bce5cbf5821b",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsEmployerAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "390accaa-98a2-4f19-9ef9-560f32ddbc3e",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.notEligibleEmployerInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "fa56d23a-1802-4fce-b536-bbcaea88546b",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsOtherAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "e4f83eef-6bcd-4b67-9841-10b03a7fe4d8",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.otherSupportAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038"
+        ]
+    },
+    {
+        "_id": "2b172a96-7a81-494e-970a-8e4e6be50965",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.applicationDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE038",
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "3fee7eaf-eb54-42ef-b740-a154442c6341",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.nativeAmerican"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "d5aca28b-5784-43bd-a02c-956e1ee2bb5f",
+        "name": "If coded 1, then Element 374 - Not Yet Eligible for Private Insurance Through Employer Status at Exit must be coded zero",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                1,
+                "$.current.privateInsEmployerAtExit"
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                0,
+                "$.current.notEligibleEmployerInsAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE373"
+        ]
+    },
+    {
+        "_id": "fd9b22eb-9f52-4658-a266-5ff71ac7242c",
+        "name": "If coded 7-10, Data element no 52: Hourly Wage at IPE and Data element no 53: Hours Worked in a Week at IPE must be blank or equal to 0 and Data element no 51:Primary Occupation at IPE must be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "$.employmentAtIPE"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "any": [
+                        {
+                            "predicate": "blank",
+                            "parameters": [
+                                "$.hoursWorkedAtIPE"
+                            ]
+                        },
+                        {
+                            "predicate": "equal",
+                            "parameters": [
+                                0,
+                                "$.hoursWorkedAtIPE"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.occupationAtIPE"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE50IPE"
+        ]
+    },
+    {
+        "_id": "616c7584-248f-4d3c-b940-ecc56d2e9e79",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "dba62fd9-bde1-42d3-88e9-bfc62fcb6b1f",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "995ef48a-39ba-4b03-ba97-212ab14d8cec",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.edTrainEnrollDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "c124621f-e1f3-4e11-8827-e50834d166d9",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "3df42ffa-e40e-4282-9784-4151e9968a89",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "bf7a3b0b-4eb7-41ea-9ca1-270eeff53b4d",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.eflSkillGainDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "64fd0606-b09b-49d2-ba07-c0f7a8b0d3b7",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.secSkillGainDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "6ee3a837-733b-4b2e-b789-41bae0ba68c1",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.postSecSkillGainDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "2faee6ed-bbd8-4c17-bcc5-6b58e537cc50",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.trainSkillGainDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "21ab6fab-d661-4864-b36b-e2e92ccbc413",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.progressSkillGainDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "b99db6af-7744-4e85-8915-d66ab02f9ff6",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "settingsreportend"
+        ]
+    },
+    {
+        "_id": "3ad51894-f131-472a-a3f0-190e5d3188e2",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.asian"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "e0a7a11f-843c-48fa-a6d9-eaf9a5c680b3",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.black"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "51a22b6f-6c90-4288-a130-d35ecf8ff91a",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.pacificIslander"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "a46bac60-6d43-420c-81fe-c917b48bfdb8",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.white"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "e2691847-fded-49a1-83c2-5c4c2da106e6",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.hispanicOrLatino"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "f1066ece-73c0-43e3-a7f4-5f79cf6dfc9d",
+        "name": "Field cannot be blank if Data Element no 38:Date of Eligibility Determination or Data element no 96: Start Date of Pre-Employment Transition Services is not blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.studentWithDisability"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.preETSStart"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE38ANDDE96"
+        ]
+    },
+    {
+        "_id": "8665f6ed-2798-468d-a590-bc049f740956",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.jobExpCounselProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "f0d08917-f6af-4111-85d7-dceca4714a24",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.jobExpCounselPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "8f0d6765-013a-4d0c-bf82-fcd0513faf4c",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.jobExpCounselCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "fc563955-06fb-4964-9e30-056de31743a0",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperienceProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "8a02f34a-b558-45e3-8157-eb68019b3a12",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperiencePurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "efbbe911-8bb3-4b3c-9d35-9b39835b447b",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperienceCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "c514f156-ca11-41c3-946b-64137ed47106",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "59e48b9d-3734-438a-b5e8-16f42ac3b84a",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "59be3638-f714-4097-87e5-c161c7cd6a08",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "c0e72e8c-a355-44ba-94e0-0a432d89bbc3",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "9cd5b14f-e513-4db2-94a9-ae2b3ddb1d35",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "68ca3e3f-3761-4658-8231-38ea5b292d8a",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "bfeb5bbc-657b-4fcb-9827-1f31d0a7fbbf",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "422613f2-8330-483d-915d-b935fec4587c",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "94fcada9-d6ac-452d-bf55-01b01aecf591",
+        "name": "If coded 1 or 2, Element 96 - Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE096StartDateOfPreEmployment"
+        ]
+    },
+    {
+        "_id": "bb3d8817-88c4-41ce-bffc-098f17492c35",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.gradProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "52abf88a-b455-423d-a26d-b4d6355fc9d2",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.gradPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "4eb86cc1-6ce2-41b2-beec-c6acbbce7cb6",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.universityProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "5979235e-0214-4ff4-8637-ab605ae043da",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.universityPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "925f9747-db61-4a2e-a168-aba4c48b7aee",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.collegeProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "d16f544e-c636-4591-884f-16018fc23740",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.collegePurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "042f5bd8-8ae1-4428-b861-ba5259a500a0",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.vocTrainProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "b33c9574-6e76-4679-a18d-12220aadaecb",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.vocTrainPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "0c88aafc-8191-4025-a4c3-d54edf14e97f",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.onJobTrainProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "5acb428e-4c38-4e8f-a4a7-79674bf35d8d",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.onJobTrainPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "5faffc3a-444f-499a-aad5-1e230914697b",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.apprenticeshipPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "3f7caf26-6485-4545-9882-688419080dbc",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.bepTrainProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "992e1c02-baa6-48d9-b894-b92313c655ad",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.bepTrainPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "bb9d02a7-de47-43d9-b16f-92074d2052bc",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.customTrainProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "aa3986df-f6af-498f-a549-c82057614097",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.customTrainPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "1a996b3e-51a2-44ba-84e9-3bebc029a738",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.supEmpProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "b2377216-4b12-402b-98c0-feacba05cf28",
+        "name": "If coded 1 then Element 127 - Start Date of Initial VR Service On or After IPE cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                "1",
+                "$.current.supEmpPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "DE127"
+        ]
+    },
+    {
+        "_id": "ef1ab9bb-961d-483c-b04e-ef3d721a8b2f",
+        "name": "First 3 digits have to be numeric",
+        "given": {
+            "predicate": "lengthLessOrEqual",
+            "parameters": [
+                2,
+                "$.current.ssn"
+            ],
+            "not": true
+        },
+        "condition": {
+            "predicate": "matches",
+            "parameters": [
+                "/^[0-9][0-9][0-9]/",
+                "$.current.ssn"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "433161d5-de03-4e7d-8b8f-d2f55fbcb8ed"
+        ]
+    },
+    {
+        "_id": "a69f88a4-8581-4bcb-838a-236a451068fe",
+        "name": "Can only be blank when Data Element 48 - Date of Most Recent or Amended IPE is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "88e430f7-896d-462c-ad60-3587118e8368"
+        ]
+    },
+    {
+        "_id": "19ba0d8c-348e-4dd0-b3dc-64ba9e793014",
+        "name": "If Element 354 - Type of Exit is equal to 0 or 1, must be equal to or after Element 7 - Date of Application.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    0,
+                    1
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "dateGreaterOrEqual",
+            "parameters": [
+                "$.current.exitDate",
+                "$.current.applicationDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "f9b8320a-662b-4c63-9247-d673a9cb2d34"
+        ]
+    },
+    {
+        "_id": "9d14d92e-359d-4479-9847-41ec7a079fbf",
+        "name": "If Element 354 - Type of Exit is equal to 2 or 3, must be equal to or after Element 38 - Date of Eligibility Determination",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    2,
+                    3
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "dateGreaterOrEqual",
+            "parameters": [
+                "$.current.exitDate",
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "808d7420-cffd-4855-9cee-b1550c2da05d"
+        ]
+    },
+    {
+        "_id": "6e1312c5-286f-4bb0-be68-0479576ab5e9",
+        "name": "If not blank, Data Element 354: Type of Exit cannot be blank",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitType"
+            ]
+        },
+        "priority": null,
+        "rulesets": []
+    },
+    {
+        "_id": "83eeea93-ce00-481b-82a7-b64f87f7d710",
+        "name": "If not blank, Data Element 355 - Reason of Exit cannot be blank",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitReason"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "338d9ffa-d353-418e-8104-d796673d5925"
+        ]
+    },
+    {
+        "_id": "774d282a-5815-48af-adf6-25cd360e52a6",
+        "name": "If Type of Exit is equal to 4, 5, or 6, Must be on or after Data Element no 48: Date of Most Recent or Amended IPE",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    4,
+                    5,
+                    6
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "dateGreaterOrEqual",
+            "parameters": [
+                "$.current.exitDate",
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "a3932634-afd1-4ccf-8f23-7c8c186f47dc"
+        ]
+    },
+    {
+        "_id": "858e81c9-8739-48c4-b10d-db17396bcd9f",
+        "name": "If Type of Exit is equal to 4, 5, or 6, Must be on or after Data Element no 48: Date of Most Recent or Amended IPE and Data Element no 127: Start Date of Initial VR Service On or After IPE provided there is a date of service liste",
+        "given": {
+            "all": [
+                {
+                    "predicate": "in",
+                    "parameters": [
+                        [
+                            4,
+                            5,
+                            6
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "dateGreaterOrEqual",
+                    "parameters": [
+                        "$.current.exitDate",
+                        "$.current.ipeDate"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "dateGreaterOrEqual",
+            "parameters": [
+                "$.current.exitDate",
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "a3932634-afd1-4ccf-8f23-7c8c186f47dc"
+        ]
+    },
+    {
+        "_id": "a65cc9d1-fa12-428f-a188-c97729805009",
+        "name": "when not blank exit date cannot be blank",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitReason"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "91c6a3f7-8590-4aad-a7a9-19a447c7658f"
+        ]
+    },
+    {
+        "_id": "2fe3dc7f-08b9-4d1f-98ff-fc396c8993bb",
+        "name": "Reason for exit must be numeric",
+        "given": null,
+        "condition": {
+            "predicate": "numeric",
+            "parameters": [
+                "$.current.exitReason"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fcd743f2-c1b7-4952-886c-92a4e81af3cb"
+        ]
+    },
+    {
+        "_id": "161743ab-9f4c-4bb8-8d25-fcd50d29a0d6",
+        "name": "If coded 14  type of exit must be coded 6",
+        "given": {
+            "all": [
+                {
+                    "predicate": "numeric",
+                    "parameters": [
+                        "$.current.exitReason"
+                    ]
+                },
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        14,
+                        "$.current.exitReason"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                6,
+                "$.current.exitType"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fcd743f2-c1b7-4952-886c-92a4e81af3cb"
+        ]
+    },
+    {
+        "_id": "4379bc80-c297-4a02-8b2b-b67296c56718",
+        "name": "DE 376 (Date Enrolled in Post-Exit Education or Training Program Leading to a Recognized Postsecondary Credential) Cannot be blank",
+        "given": null,
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.postExitTrainEnrolledDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8013b99f-79b2-4f89-860f-ce1b4ff6fc90"
+        ]
+    },
+    {
+        "_id": "c06684f5-7ce4-40c2-9f00-d0b1282dfdf8",
+        "name": "Must be within 365 days of Element 353 - Date of Exit",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.postExitTrainEnrolledDate"
+            ]
+        },
+        "condition": {
+            "predicate": "daysDiffLessOrEqual",
+            "parameters": [
+                "$.current.postExitTrainEnrolledDate",
+                365,
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8013b99f-79b2-4f89-860f-ce1b4ff6fc90"
+        ]
+    },
+    {
+        "_id": "6b96668e-cb93-4ea4-ae5a-bd018e71bf8d",
+        "name": "Employment must be coded between 7-10",
+        "given": null,
+        "condition": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "$.current.employmentAtIPE"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fd9b22eb-9f52-4658-a266-5ff71ac7242c"
+        ]
+    },
+    {
+        "_id": "7fcdf49c-e1da-4566-864e-03ed74dff436",
+        "name": "If coded 1 - 5, Element 354 - Type of Exit must be coded 6",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "$.current.empOutcomeAtExit"
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                6,
+                "$.current.exitType"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "df98e625-606f-4a62-9ba2-073b5982bd55"
+        ]
+    },
+    {
+        "_id": "371cb113-617f-465b-8a67-57a88b0d42ea",
+        "name": "Cannot be blank if Element 354 - Type of Exit is coded 5 or 6",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    5,
+                    6
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.occupationAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "df98e625-606f-4a62-9ba2-073b5982bd55",
+            "bd381a38-ade5-40e0-97fe-c1cb2617b743"
+        ]
+    },
+    {
+        "_id": "fccb54b7-c9be-4a3f-b7b1-d0e2c224ddc5",
+        "name": "Cannot be blank if Element 354 - Type of Exit is coded 5 or 6",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    5,
+                    6
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.empStartAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "993dd74d-53ff-454e-b1fb-1e8ea9d4cdfd"
+        ]
+    },
+    {
+        "_id": "64ead87b-91d8-418b-a4cd-457ae3d2082b",
+        "name": "Cannot be blank if Element 356 -  Employment Outcome at exit is coded 1 – 7",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "$.current.empOutcomeAtExit"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.empStartAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "0273bed2-d284-4667-992c-3f2152b0ff27"
+        ]
+    },
+    {
+        "_id": "d520fd7b-e248-44d1-9d26-01f49eca1c13",
+        "name": "If coded 1, then Element 374 - Not Yet Eligible for Private Insurance Through Employer Status at Exit must be coded zero",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    1
+                ],
+                "$.current.privateInsEmployerAtExit"
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    0
+                ],
+                "$.current.notEligibleEmployerInsAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "d5aca28b-5784-43bd-a02c-956e1ee2bb5f"
+        ]
+    },
+    {
+        "_id": "aa10afa3-779a-4ef2-9c74-71fde9e12c98",
+        "name": "Eligibilty Date is not blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    0
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce924d16-3d03-4ab3-b42f-3668ca77557b"
+        ]
+    },
+    {
+        "_id": "55383783-55d6-4573-a913-6f0694912f53",
+        "name": "Trail work Start Date is not blank",
+        "given": {
+            "all": [
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        [
+                            0
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.trialWorkStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce924d16-3d03-4ab3-b42f-3668ca77557b"
+        ]
+    },
+    {
+        "_id": "e5e4bf38-cb5e-4ad4-b8fc-04a46f6662e1",
+        "name": "Date Element 7 - Date of Application cannot be blank",
+        "given": {
+            "all": [
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        [
+                            0
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.trialWorkStart"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.applicationDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce924d16-3d03-4ab3-b42f-3668ca77557b"
+        ]
+    },
+    {
+        "_id": "1f90b80b-ac86-4e8c-b50a-95cc045a7b79",
+        "name": "If coded 7, Element 38 - Date of Eligibility Determination cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    7
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "1118f449-256d-4a15-971f-1fb4108b92ee"
+        ]
+    },
+    {
+        "_id": "f16c9508-2bd8-495c-acef-f40e5c3f9e5f",
+        "name": "If coded 7 or 8, Data Element no 48: Date of Most Recent or Amended IPE must be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    7,
+                    8
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "d64f0fdb-2c34-4790-8715-36d55bb0a3c3"
+        ]
+    },
+    {
+        "_id": "9e6d2612-6c17-418d-8a69-c44c3d8ea011",
+        "name": "If coded 6, Data Element no 38: Date of Eligibility Determination and Data Element no 48: Date of Most Recent or Amended IPE cannot be blank. Data Element no 356: Employment Outcome at Exit must not be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    6
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.ipeDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.empOutcomeAtExit"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2edc30c0-6920-4316-936d-ff1434166df0"
+        ]
+    },
+    {
+        "_id": "ffa0f0fa-e681-4201-a558-7bca2ae52d31",
+        "name": "If coded 6, Data Element no 38: Date of Eligibility Determination cannot be balnk",
+        "given": {
+            "all": [
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        [
+                            6
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.ipeDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.empOutcomeAtExit"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2edc30c0-6920-4316-936d-ff1434166df0"
+        ]
+    },
+    {
+        "_id": "166bfac6-df58-4f64-8701-d6034710922a",
+        "name": "If coded 6, Data Element no 48: Date of Most Recent or Amended IPE cannot be blank",
+        "given": {
+            "all": [
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        [
+                            6
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.empOutcomeAtExit"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2edc30c0-6920-4316-936d-ff1434166df0"
+        ]
+    },
+    {
+        "_id": "00bcc556-1773-4983-be34-e8e3405b1fd5",
+        "name": "If coded 6,Data Element no 356: Employment Outcome at Exit must not be blank",
+        "given": {
+            "all": [
+                {
+                    "predicate": "equal",
+                    "parameters": [
+                        [
+                            6
+                        ],
+                        "$.current.exitType"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.ipeDate"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.empOutcomeAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2edc30c0-6920-4316-936d-ff1434166df0"
+        ]
+    },
+    {
+        "_id": "9db34f65-04cc-4346-a996-c438af7b6e7d",
+        "name": "If coded 4 05 , Data Element no 38: Date of Eligibility Determination and Data Element no 48: Date of Most Recent or Amended IPE cannot be blank. Data Element no 356: Employment Outcome at Exit must  be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    4,
+                    5
+                ],
+                "$.current.exitType"
+            ]
+        },
+        "condition": {
+            "all": [
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.eligibilityDate"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.ipeDate"
+                    ]
+                },
+                {
+                    "predicate": "blank",
+                    "parameters": [
+                        "$.current.empOutcomeAtExit"
+                    ]
+                }
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "041bd97c-a00a-4005-93f0-5dde28b5ea8b"
+        ]
+    },
+    {
+        "_id": "05b0cc3a-6346-4091-aea1-801a27f76514",
+        "name": "Cannot be blank If Element 348 - Employment Outcome is coded 1 - 7",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "$.current.empOutcomeAtEmp"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.hoursWorkedAtEmp"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "9bcb3bde-73d4-4974-b812-f173a9da7efa"
+        ]
+    },
+    {
+        "_id": "93e25037-1e98-44f5-acba-5c908b752460",
+        "name": "Must be greater than 0 If Element 348 - Employment Outcome is coded 1 - 6",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "$.current.empOutcomeAtEmp"
+            ]
+        },
+        "condition": {
+            "predicate": "greaterThan",
+            "parameters": [
+                0,
+                "$.current.hoursWorkedAtEmp"
+            ]
+        },
+        "priority": null,
+        "rulesets": []
+    },
+    {
+        "_id": "c1bdc120-37c2-4715-8278-f4d6cc2e9067",
+        "name": "Cannot be blank If Element 348 - Employment Outcome is coded 1 - 7",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "$.current.empOutcomeAtEmp"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.empStartAtEmp"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "af4e1af7-d3c6-4269-ae7d-da5e26e98b6b"
+        ]
+    },
+    {
+        "_id": "40280eff-6083-47bc-82a6-5224cd462a9a",
+        "name": "Cannot be blank If Element 348 - Employment Outcome is coded 1 - 7",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "$.current.empOutcomeAtEmp"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.occupationAtEmp"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "b9ae91c4-2fd9-4bde-a7d0-7d4eff3a2095"
+        ]
+    },
+    {
+        "_id": "c956ff62-1565-41d1-8e29-463dd590e08f",
+        "name": "If not blank then Data Element 48 - Date of Most Recent or Amended IPE cannot be blank",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ca13962c-2320-4a06-9d30-806706fd6253"
+        ]
+    },
+    {
+        "_id": "f6c51f5b-884a-4a7f-947a-bfb64ddfae71",
+        "name": "value is not blank but  Individual with a Disability is blank",
+        "given": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.initServStart"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.indWithDisability"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce703533-a19e-41b3-bc61-a623cd89215e"
+        ]
+    },
+    {
+        "_id": "1eecde35-2d29-43e6-b2af-7aa547dee3b9",
+        "name": "value is not blank but  Individual with a Disability is not codeed 1",
+        "given": {
+            "all": [
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.initServStart"
+                    ]
+                },
+                {
+                    "predicate": "notBlank",
+                    "parameters": [
+                        "$.current.indWithDisability"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                1,
+                "$.current.indWithDisability"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce703533-a19e-41b3-bc61-a623cd89215e"
+        ]
+    },
+    {
+        "_id": "2860b284-eb11-4cec-a438-8e750050ffee",
+        "name": "Can't be blank if Element 50 - Employment status at IPE is coded 1 – 6",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "$.current.employmentAtIPE"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.occupationAtIPE"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2b3783c2-9216-474d-beb5-b6e98a96f826"
+        ]
+    },
+    {
+        "_id": "8c1ba717-2f20-4dd8-9bfc-8aaf7382f74d",
+        "name": "Can't be blank if Element 50 - Employment status at IPE is coded 1 – 6",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    3
+                ],
+                "$.current.employmentAtIPE"
+            ]
+        },
+        "condition": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    9
+                ],
+                "$.current.highestEducation"
+            ],
+            "not": true
+        },
+        "priority": null,
+        "rulesets": [
+            "1fff982e-31d8-4973-8e43-ffd5d6aa4a45"
+        ]
+    },
+    {
+        "_id": "704c46ce-d493-437b-b92d-4bc13234e94e",
+        "name": "If coded 1 or 2 then Element 75 - School Status cannot be 1, 2, or 4",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.highestEducation"
+            ]
+        },
+        "condition": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2,
+                    4
+                ],
+                "$.current.schoolStatus"
+            ],
+            "not": true
+        },
+        "priority": null,
+        "rulesets": [
+            "2adf20fa-defe-4ef9-9f28-7c13a2b18392"
+        ]
+    },
+    {
+        "_id": "71567191-69d5-4e30-90af-9d5b1f386d80",
+        "name": "Cannot be blank if Element 76 - Highest Educational Level Completed is coded 3",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    3
+                ],
+                "$.current.highestEducation"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.specEdCertificateDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fd87160b-46cf-4b32-ba7d-3ec931310904"
+        ]
+    },
+    {
+        "_id": "82aad9f4-d899-4c4a-97bf-f8887f6e6408",
+        "name": "If Element 76 - Highest Education Level is coded 6 (attained associate's degree), then this field cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    6
+                ],
+                "$.current.highestEducation"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.associatesDegreeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "1f3ae647-a315-4b65-9fc5-0138e548dbdb"
+        ]
+    },
+    {
+        "_id": "5d00b2cb-e880-4074-8a6e-c8c86fb1d801",
+        "name": "If Element 76 - Highest Education Level is coded 7 (attained associate's degree), then this field cannot be blank",
+        "given": {
+            "predicate": "equal",
+            "parameters": [
+                [
+                    7
+                ],
+                "$.current.highestEducation"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.bachelorsDegreeDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "188b3ffb-47bd-433f-bab3-8a14af47179f"
+        ]
+    },
+    {
+        "_id": "ecaac81e-6f3b-4ab4-b1db-4019ca8b7020",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.empOutcomeAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "e146a3c8-9afc-4cf9-b5f9-c83ad73125b7"
+        ]
+    },
+    {
+        "_id": "18b346b6-23bd-438a-9cb0-e4242e957816",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.occupationAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "cf0384ef-f297-4965-a5b7-d0efb9aa1723"
+        ]
+    },
+    {
+        "_id": "a9d52bde-8dac-4bce-bd55-8e1cfb647915",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.empStartAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "25396697-3b18-4af6-a2bc-b2ec426b013d"
+        ]
+    },
+    {
+        "_id": "77299b31-aae4-445f-8059-c80833bdfea9",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.hourlyWageAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "eb97557a-2583-434d-919e-6ea127d5f343"
+        ]
+    },
+    {
+        "_id": "e2a36072-2d1a-47c3-865e-7ac8a0c13700",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.hoursWorkedAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "711ec14b-116f-475e-98e5-42feab9eab08"
+        ]
+    },
+    {
+        "_id": "22f7add2-12ac-4c67-959c-75efe2dc7243",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssdiAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "51c373e1-5040-4970-af96-7488a1566cc2"
+        ]
+    },
+    {
+        "_id": "39f05818-a8d7-4e53-b800-c23d3d7e77f0",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssiAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "62d7c598-ff67-484d-bfbb-3e155b3c0d1b"
+        ]
+    },
+    {
+        "_id": "302c04f5-0f44-4b33-b332-6a657605cc99",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.tanfAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "95fc9589-192b-43a8-a3b8-f6c8d6be1cb8"
+        ]
+    },
+    {
+        "_id": "7f363adf-ee01-49b9-ae48-07238989f634",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.genAssistanceAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "f869250a-a99f-48a8-b8fd-7bf3264b9d57"
+        ]
+    },
+    {
+        "_id": "31b74dc8-4942-4f09-903e-d4a24bcdbbf9",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.vetDisabilityAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8204e152-d142-4ccb-858b-ab294e4595d2"
+        ]
+    },
+    {
+        "_id": "236b4c86-58c5-43e5-aeb6-9ca466dbea55",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.workersCompAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "3aaddac3-0793-4668-82f5-d3c87a027160"
+        ]
+    },
+    {
+        "_id": "7200b351-84e7-40d3-a91c-a6a3ac1f517c",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.otherSupportAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "65d4c9d0-b96f-4ccd-8452-febd82362eec"
+        ]
+    },
+    {
+        "_id": "cf0a5a7a-c57e-44bc-98ae-d39ddffa4082",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.primarySupportAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "b7bc7ddf-b2de-4caa-a35a-5b848b9f3a4f"
+        ]
+    },
+    {
+        "_id": "16fac199-169d-409d-8459-da276f822ab2",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicaidAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "cc026f44-f1e9-4faf-8b74-08615640b034"
+        ]
+    },
+    {
+        "_id": "cd4abe47-0264-40cc-9efb-2145fdb85e0b",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicareAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "c16fe200-1838-42de-a92f-f5d2c8f6b241"
+        ]
+    },
+    {
+        "_id": "491419b7-5459-444f-9c26-5f216dd8df70",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.acaAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "1b5e09da-1c0f-48f7-85c8-6ad22efb866f"
+        ]
+    },
+    {
+        "_id": "082d0f4d-5eeb-432d-889d-31274e940043",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.publicInsAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "1e7288b9-9bb9-4b29-90e5-5b97aeb87d42"
+        ]
+    },
+    {
+        "_id": "259d530d-d8cc-4b63-9a31-6cb78b651d68",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsEmployerAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "69d8324c-36d4-4aab-8fa7-30bed132d9e0"
+        ]
+    },
+    {
+        "_id": "db700182-70ce-41c6-b690-d80a54388868",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.notEligibleEmployerInsAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "221e3ebd-70dc-49ae-b64f-792a7e03e84"
+        ]
+    },
+    {
+        "_id": "ff293d2a-1d5f-459f-b752-b67d1b3da66e",
+        "name": "Must be blank if Data Element 353: Date of Exit is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsOtherAtExit"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "017679a1-8b95-45cd-adc5-0a5f4913a66a"
+        ]
+    },
+    {
+        "_id": "01339ad3-e355-4815-bcec-3a93aa643f34",
+        "name": "If Element 353 - Date of Exit is blank, then this must be blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.wagesPostExit1"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "3b1bf862-ce8a-4fab-b088-3e0c98a8cefa"
+        ]
+    },
+    {
+        "_id": "6624cef0-67b6-43e6-a937-cbe0967a2ac4",
+        "name": "If Element 353 - Date of Exit is blank, then this must be blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.wagesPostExit2"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "f58e845b-5c59-43ca-bdfa-59172acb47dd"
+        ]
+    },
+    {
+        "_id": "b48ff686-b991-4678-8777-be956ca5e1cf",
+        "name": "If Element 353 - Date of Exit is blank, then this must be blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.wagesPostExit3"
+            ]
+        },
+        "priority": null,
+        "rulesets": []
+    },
+    {
+        "_id": "7e6f1e0b-1c2c-496a-b9a0-6cd51dff47c6",
+        "name": "If Element 353 - Date of Exit is blank, then this must be blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.wagesPostExit3"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "0d2f4f77-3007-4fc0-98b7-91c923003815"
+        ]
+    },
+    {
+        "_id": "90624fe7-d5cb-44ef-a943-c57c30fe42e6",
+        "name": "If Element 353 - Date of Exit is blank, then this must be blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.exitDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.wagesPostExit4"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "1678366e-d794-45d8-b754-5c745fc61306"
+        ]
+    },
+    {
+        "_id": "a65639bf-78da-4f76-90e7-13b21888e313",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.veteran"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "e1a38630-05b9-4c10-98ec-949890d90d21",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.sex"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "e7f213aa-282a-4ec2-ba33-9a1f0d780e82",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.applicationDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "2a60e7b3-d3b2-4160-8894-3626752a3f5e",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.livingArrangement"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ffc50d7a-cb3c-478b-8917-3cc3e2cb7554"
+        ]
+    },
+    {
+        "_id": "a22537d4-a03b-465b-aff7-0a486362d124",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.stateCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "07e4a2a5-08b4-4392-924e-7e11fc9da8dc"
+        ]
+    },
+    {
+        "_id": "6475ff66-952e-47f8-8277-1a696dc71a1e",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.countyCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "dd4fda04-bf03-41b5-981e-04ed3060a573"
+        ]
+    },
+    {
+        "_id": "7a399af9-74e0-46dd-9fce-1746f4df9344",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.zipCode"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "dd7983b8-e8ff-4857-9daf-eae979a7649d"
+        ]
+    },
+    {
+        "_id": "a9187554-8b4c-43c0-b5ff-4e624597cf74",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.referralSource"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "046a2ac1-53a5-4dbe-9c47-385711a4b1cd"
+        ]
+    },
+    {
+        "_id": "d23aee8d-599e-4141-8601-d5a554794e77",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssdiAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "d60a019f-1294-4737-8142-f665b185b904"
+        ]
+    },
+    {
+        "_id": "fc196819-ffa0-4965-a0a4-10877300de8a",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.ssiAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "d60a019f-1294-4737-8142-f665b185b904"
+        ]
+    },
+    {
+        "_id": "6a19d6c1-c757-4a54-acb3-f6bf074e6a58",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.tanfAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "cad5ece1-476c-4ea0-a176-c25ff9152437"
+        ]
+    },
+    {
+        "_id": "756cae25-7735-4cae-bcd7-14038c0b91fa",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.genAssistanceAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "f0085d93-5950-430f-96ac-4566b957eaa2"
+        ]
+    },
+    {
+        "_id": "2a5c5f4e-aabf-4b66-85f2-eb175eb20fa8",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.vetDisabilityAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "3f12fb04-2724-4215-ba52-3ccab6a5ab57"
+        ]
+    },
+    {
+        "_id": "64dd54ac-7f98-43fc-b07f-767b16eca005",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.workersCompAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "75893e57-a4f0-40f0-b973-12ba2aadc404"
+        ]
+    },
+    {
+        "_id": "2e67104d-c3ec-43ae-a598-8cd60475b0dc",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.unemploymentInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2b0e28d2-1eff-4363-86be-6db2b7e9825f"
+        ]
+    },
+    {
+        "_id": "8708381f-99a1-44b1-af36-4175cd1b58b9",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.primarySupportAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ce50b565-c7e2-48d9-bc05-722e6dbda068"
+        ]
+    },
+    {
+        "_id": "8fffa9fc-8a29-44fc-8ded-b62bd0b59c5a",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicaidAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "83d46ce9-5245-4d7a-a316-358c691ff6a5"
+        ]
+    },
+    {
+        "_id": "5637a958-8316-4a7e-b9e8-3ef55caa7ce5",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.medicareAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "e95a4315-b243-4a1a-842f-1e70e486dccd"
+        ]
+    },
+    {
+        "_id": "994701b9-136b-4972-8d04-6ff49fa56ee8",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.acaAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2f7ebde4-186a-43be-8fc3-b74ed47a944c"
+        ]
+    },
+    {
+        "_id": "6c239b78-3bd4-435b-9fa6-19a12921d4b4",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.publicInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "465db4a0-ef99-4d2a-b1e2-97ee9b834738"
+        ]
+    },
+    {
+        "_id": "2720e582-c57b-4e80-96cc-2f2ff2d78043",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsEmployerAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "024003cc-2695-461e-9918-bce5cbf5821b"
+        ]
+    },
+    {
+        "_id": "5ae14e9d-8acc-4b94-933c-0e4af8e1b995",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.notEligibleEmployerInsAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "390accaa-98a2-4f19-9ef9-560f32ddbc3e"
+        ]
+    },
+    {
+        "_id": "82181447-d1a6-4026-9315-9ee9d2705d4a",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.privateInsOtherAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fa56d23a-1802-4fce-b536-bbcaea88546b"
+        ]
+    },
+    {
+        "_id": "7fa081c9-16d5-4d8f-a71a-571de954e5c6",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.otherSupportAtApp"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "ba9d8ec7-2653-4730-9914-9e3b6cd08895"
+        ]
+    },
+    {
+        "_id": "f69655bc-56f5-41ad-94b5-9bd8fdf1e100",
+        "name": "Can only be blank when Element 38 - Date of Eligibility Determination is blank",
+        "given": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityExtDate"
+            ]
+        },
+        "condition": {
+            "predicate": "blank",
+            "parameters": [
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "2b172a96-7a81-494e-970a-8e4e6be50965"
+        ]
+    },
+    {
+        "_id": "2c9288ea-c6b6-4cf6-b9a2-d49b288720a8",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.eligibilityDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "15cbd630-2855-4e27-8df4-2047ee095622",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.ipeDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "4f4b35e2-3f9b-4bcd-8627-cff80e5ed868",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.edTrainEnrollDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "5cb70a91-44d2-4de7-a6a5-cb2051d3f757",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "0aea4052-8e8d-4237-b7f2-cfd538ad9830",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.initServStart"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "8bf29a1f-b588-4b0c-bbf3-9c1d54512b05",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.eflSkillGainDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "8920779d-5a58-47fe-a4de-bca84de0e436",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.secSkillGainDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "de9b8944-9b00-4a97-be29-178c1aa165be",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.postSecSkillGainDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "4ffcbe24-2f76-4c62-88ff-717fe87b4674",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.trainSkillGainDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "d5ab4e1d-3bc1-4adc-a6f9-9ac3637bca12",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.progressSkillGainDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "cc97c9be-e905-4ac9-882d-913d403bd326",
+        "name": "Must be on or before the end date of the reporting period",
+        "given": null,
+        "condition": {
+            "predicate": "dateLessOrEqual",
+            "parameters": [
+                "$.settings.reportEnd",
+                "$.current.exitDate"
+            ]
+        },
+        "priority": null
+    },
+    {
+        "_id": "69a3b294-3315-4e13-9a25-2c8e052650f6",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.jobExpCounselProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8665f6ed-2798-468d-a590-bc049f740956"
+        ]
+    },
+    {
+        "_id": "46c11f6d-7f7b-4d8f-b8a7-a55c8cf477bb",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.jobExpCounselPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "f0d08917-f6af-4111-85d7-dceca4714a24"
+        ]
+    },
+    {
+        "_id": "48157c3e-98c9-454f-b47c-0cf5771e59cf",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.jobExpCounselCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8f0d6765-013a-4d0c-bf82-fcd0513faf4c"
+        ]
+    },
+    {
+        "_id": "ccde6ad8-3bad-4e0e-a4f5-a3803702750d",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperienceProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "fc563955-06fb-4964-9e30-056de31743a0"
+        ]
+    },
+    {
+        "_id": "6fee2b49-80ae-4174-b5cc-06fecd8d5f3c",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperiencePurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "8a02f34a-b558-45e3-8157-eb68019b3a12"
+        ]
+    },
+    {
+        "_id": "f017e5f4-d323-4933-a1a5-a7f0224e8d85",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workExperienceCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "efbbe911-8bb3-4b3c-9d35-9b39835b447b"
+        ]
+    },
+    {
+        "_id": "4aff020c-3cbc-4190-8b0b-f8654a75689d",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "c514f156-ca11-41c3-946b-64137ed47106"
+        ]
+    },
+    {
+        "_id": "6cb5726b-9af7-4b14-8268-a4b57fde93ca",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "59e48b9d-3734-438a-b5e8-16f42ac3b84a"
+        ]
+    },
+    {
+        "_id": "73c68657-7c32-4257-b8d8-b49263de968b",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.enrollOppCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "59be3638-f714-4097-87e5-c161c7cd6a08"
+        ]
+    },
+    {
+        "_id": "ffe0cb77-210e-4547-8096-890f0608d9c4",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "c0e72e8c-a355-44ba-94e0-0a432d89bbc3"
+        ]
+    },
+    {
+        "_id": "7ac4f655-674e-484f-98e3-2994ae836ee2",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "9cd5b14f-e513-4db2-94a9-ae2b3ddb1d35"
+        ]
+    },
+    {
+        "_id": "ceabd495-3672-4f4a-958e-e299ec53d7d3",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.workReadinessCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "68ca3e3f-3761-4658-8231-38ea5b292d8a"
+        ]
+    },
+    {
+        "_id": "f88d2239-e284-4cee-8b32-f1a9997e3d92",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyProvidedByAgency"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "bfeb5bbc-657b-4fcb-9827-1f31d0a7fbbf"
+        ]
+    },
+    {
+        "_id": "e893f57e-afd7-4236-bd54-71698de07199",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyPurchased"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "422613f2-8330-483d-915d-b935fec4587c"
+        ]
+    },
+    {
+        "_id": "c6c933ea-e225-43b5-8482-501d5c466005",
+        "name": "When value is coded Start Date of Pre-Employment Transition Services cannot be blank.",
+        "given": {
+            "predicate": "in",
+            "parameters": [
+                [
+                    1,
+                    2
+                ],
+                "$.current.selfAdvocacyCompBene"
+            ]
+        },
+        "condition": {
+            "predicate": "notBlank",
+            "parameters": [
+                "$.current.preETSStart"
+            ]
+        },
+        "priority": null,
+        "rulesets": [
+            "94fcada9-d6ac-452d-bf55-01b01aecf591"
+        ]
+    }
+]
